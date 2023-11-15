@@ -7,6 +7,6 @@
   "useTabs": false,
   "qutoeProps": "as-needed",
   "bracketSpacing": true,
-  "bracketSameLine": false,
-  "jsxBracketSameLine": false
+  "bracketSameLine": true,
+  "jsxBracketSameLine": true
 }
