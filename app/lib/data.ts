@@ -1,4 +1,4 @@
-import { sql } from '@vercel/postgres';
+import {sql} from '@vercel/postgres';
 import {
   CustomerField,
   CustomersTable,
@@ -8,9 +8,9 @@ import {
   Revenue,
   User,
 } from './definitions';
-import { formatCurrency } from './utils';
-import { unstable_noStore as noStore } from 'next/cache';
-import { PrismaClient } from '@prisma/client';
+import {formatCurrency} from './utils';
+import {unstable_noStore as noStore} from 'next/cache';
+import {PrismaClient} from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -71,10 +71,10 @@ export async function fetchCardData() {
     // However, we are intentionally splitting them to demonstrate
     // how to initialize multiple queries in parallel with JS.
     const invoiceCountPromise =
-            sql`
-                SELECT COUNT(*)
-                FROM invoices
-            `;
+        sql`
+          SELECT COUNT(*)
+          FROM invoices
+        `;
     const customerCountPromise = sql`
       SELECT COUNT(*)
       FROM customers
